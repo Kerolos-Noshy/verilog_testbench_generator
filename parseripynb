@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 247,
+   "execution_count": 84,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -30,7 +30,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 248,
+   "execution_count": 85,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -45,7 +45,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 249,
+   "execution_count": 86,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -64,7 +64,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 250,
+   "execution_count": 87,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -78,7 +78,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 251,
+   "execution_count": 88,
    "metadata": {},
    "outputs": [
     {
@@ -117,7 +117,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 252,
+   "execution_count": 89,
    "metadata": {},
    "outputs": [
     {
@@ -153,7 +153,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 253,
+   "execution_count": 90,
    "metadata": {},
    "outputs": [
     {
@@ -170,7 +170,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 254,
+   "execution_count": 91,
    "metadata": {},
    "outputs": [
     {
@@ -224,7 +224,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 255,
+   "execution_count": 92,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -242,7 +242,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 256,
+   "execution_count": 93,
    "metadata": {},
    "outputs": [
     {
@@ -270,7 +270,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 257,
+   "execution_count": 94,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -296,7 +296,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 258,
+   "execution_count": 95,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -308,16 +308,16 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 259,
+   "execution_count": 96,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "{'HasAccess', \"message == 4'b1111 & Input_Pin == pin\"}\n",
+      "{'Input_Pin'}\n",
       "{'HasAccess'}\n",
-      "set()\n"
+      "{'HasAccess'}\n"
      ]
     }
    ],
@@ -345,7 +345,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 260,
+   "execution_count": 97,
    "metadata": {},
    "outputs": [
     {
@@ -362,7 +362,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 261,
+   "execution_count": 98,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -382,7 +382,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 262,
+   "execution_count": 99,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -419,7 +419,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 263,
+   "execution_count": 100,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -468,7 +468,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 264,
+   "execution_count": 101,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -481,7 +481,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 265,
+   "execution_count": 102,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -502,7 +502,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 266,
+   "execution_count": 103,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -523,18 +523,19 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 267,
+   "execution_count": 104,
    "metadata": {},
    "outputs": [],
    "source": [
     "def testbench_initial_block(time_delay):\n",
     "    global val\n",
     "    content = \"\"\n",
-    "    content += ('//initial block\\ninitial\\n  begin\\n    //initial values\\n')\n",
-    "    maxPortSize = 3\n",
+    "    content += ('  integer i;\\n  begin\\n//initial block\\ninitial\\n  begin\\n    //initial values\\n')\n",
+    "    maxPortSize = 12\n",
     "    for port in inputs_list :\n",
     "        maxPortSize = max(port[\"length\"],maxPortSize)\n",
     "    iterationCounter = int(pow(2,maxPortSize)/2)\n",
+    "    iterationCounter = min(maxPortSize, 50)\n",
     "    for i in range (iterationCounter):\n",
     "        if(i != 0):\n",
     "            content += ('  #'+ str(time_delay)+'\\n')\n",
@@ -556,14 +557,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 268,
+   "execution_count": 105,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "{'0100', '1101', '0', '1'}\n"
+      "{'0', '1', '0111', '1011'}\n"
      ]
     }
    ],
@@ -590,7 +591,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 269,
+   "execution_count": 106,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -611,25 +612,29 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 270,
+   "execution_count": 107,
    "metadata": {},
    "outputs": [],
    "source": [
     "def testbench_monitor_block() :\n",
     "    content = \"\"\n",
-    "    content += ('initial begin\\n$display (\"        \t\t\t\",\"Time ')\n",
+    "    word_size = []\n",
+    "    content += ('initial begin\\n  $display (\"        \t\t\t\",\"Time ')\n",
     "    for port in inputs_list :\n",
-    "        content += (port[\"name\"] + '_tb ')\n",
+    "        content += (port[\"name\"]+ ' ')\n",
+    "        word_size.append(len(port[\"name\"]))\n",
     "    content += ('\");\\n')\n",
-    "    content += ('$monitor(\"  ')\n",
-    "    for i in range(len(inputs_list)+1) :\n",
-    "        content += ('%d  ')\n",
+    "    content += ('  $monitor(\"    %d')\n",
+    "    for i in range(1, len(inputs_list)+1) :\n",
+    "        w = max(word_size[i-1], port[\"length\"])\n",
+    "        s = '{space:{width}}{id}'.format(space = ' ', width = w+1, id = '%d')\n",
+    "        content += (s)\n",
     "    content += ('\" , $time')\n",
     "    for port in inputs_list :\n",
     "        content += (','+ port[\"name\"]+'_tb')\n",
     "    content += (');\\n')\n",
     "    content += ('end\\n')\n",
-    "    content += ('\\nendmodule')\n",
+    "    content += ('end\\nendmodule')\n",
     "    return content"
    ]
   },
@@ -643,7 +648,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 271,
+   "execution_count": 108,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -660,7 +665,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 272,
+   "execution_count": 109,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -679,7 +684,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 273,
+   "execution_count": 110,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -692,7 +697,7 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 3",
+   "display_name": "base",
    "language": "python",
    "name": "python3"
   },
@@ -706,12 +711,12 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.11.1"
+   "version": "3.9.12"
   },
   "orig_nbformat": 4,
   "vscode": {
    "interpreter": {
-    "hash": "5181c353ac3e898d3fda5e0f59c1bb89b153b5879992718e6ee7ada426f666b7"
+    "hash": "b57d2e1c31f7300b027b1154729c4f33a19579191bdba39adf23b26489f1f431"
    }
   }
  },
