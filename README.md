@@ -8,7 +8,7 @@ This project is a Python script that generates a Verilog testbench file using th
 
 ## Prerequisites
 - Python 3.x
-- HDLVerilog library
+- HDLParse library
 - You can install the dependencies by running the following command:
   - `pip install hdlparse`
 
