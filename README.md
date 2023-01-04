@@ -3,7 +3,8 @@
 This project is a Python script that generates a Verilog testbench file using the HDLVerilog library. The generated testbench can be used to simulate the behavior of a digital logic design described in Verilog.
 
 ## Installation
-To use this script, you will need to have Python and the HDLVerilog library installed on your system.
+- To use this script, you will need to have Python and the HDLVerilog library installed on your system.
+- Another way to use this script by downloading the **executable file** and using it directly without any prerequisites.
 
 ## Prerequisites
 - Python 3.x
