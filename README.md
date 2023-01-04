@@ -15,3 +15,8 @@ This project is a Python script that generates a Verilog testbench file using th
 
 ## Important Note
  - This script doesn't generate a correct testbench if the verilog code has `clk` or `rst` (_may be we implement it soon_)
+
+## Screenshots
+![](https://github.com/Kerolos-Noshy/verilog_testbench_generator/blob/main/screem%20shots/1.png)
+![](https://github.com/Kerolos-Noshy/verilog_testbench_generator/blob/main/screem%20shots/2.png)
+![](https://github.com/Kerolos-Noshy/verilog_testbench_generator/blob/main/screem%20shots/3.png)
