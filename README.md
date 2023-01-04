@@ -10,7 +10,7 @@ This project is a Python script that generates a Verilog testbench file using th
 - Python 3.x
 - HDLVerilog library
 - You can install the dependencies by running the following command:
-  - `pip install hdldesign`
+  - `pip install hdlparse`
 
 
 ## Important Note
