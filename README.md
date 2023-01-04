@@ -12,5 +12,5 @@ To use this script, you will need to have Python and the HDLVerilog library inst
   - `pip install hdldesign`
 
 
-## Note
+## Important Note
  - This script doesn't generate a correct testbench if the verilog code has `clk` or `rst` (_may be we implement it soon_)
