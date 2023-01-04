@@ -157,7 +157,7 @@ def testbench_monitor_block():
     for port in inputs_list:
         content += (port["name"] + '  ')
         word_size.append(len(port["name"]))
-    content += ('");\n  $monitor("     %d')
+    content += ('");\n  $monitor ("     %d')
     for i in range(1, len(inputs_list) + 1):
         w = max(word_size[i - 1], port["length"])
         content += ('{space:{width}}{id}'.format(space=' ', width=w, id='%d'))
