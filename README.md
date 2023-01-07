@@ -1,6 +1,6 @@
 # Verilog testbench generator
 ## Overview
-This project is a Python script that generates a Verilog testbench file using the HDLParse library. The generated testbench can be used to simulate the behavior of a digital logic design described in Verilog.
+Electronic Design Automation course project is a Python script that generates a Verilog testbench file using the HDLParse library. The generated testbench can be used to simulate the behavior of a digital logic design described in Verilog.
 
 ## Installation
 - To use this script, you will need to have Python and the HDLParse library installed on your system.
