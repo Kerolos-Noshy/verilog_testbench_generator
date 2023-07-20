@@ -20,3 +20,20 @@ Electronic Design Automation course project is a Python script that generates a 
 ![](https://github.com/Kerolos-Noshy/verilog_testbench_generator/blob/main/Screenshots/1.png)
 ![](https://github.com/Kerolos-Noshy/verilog_testbench_generator/blob/main/Screenshots/2.png)
 ![](https://github.com/Kerolos-Noshy/verilog_testbench_generator/blob/main/Screenshots/3.png)
+
+## Contributors
+
+<a href="https://github.com/Kerolos-Noshy/Python/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Kerolos-Noshy/verilog_testbench_generator"/>
+</a>
+<a href="https://github.com/anass-zikry/Python/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=anass-zikry/verilog_testbench_generator"/>
+</a>
+<a href="https://github.com/xYoussefMahmoudx/Python/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=xYoussefMahmoudx/verilog_testbench_generator"/>
+</a>
+<a href="https://github.com/Ahmedkhaledd1/Python/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Ahmedkhaledd1/verilog_testbench_generator"/>
+</a>
+
+
